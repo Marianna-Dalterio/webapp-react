@@ -9,7 +9,7 @@ MILESTONE 1
 
 Mettiamo su un nuovo progetto React aiutandoci con Vite ✅
 Ripuliamo come sempre l’app da file e codice di esempio non necessari ✅
-Installiamo il necessario: React Router, Axios e Bootstrap (se volete utilizzarlo) 
+Installiamo il necessario: React Router, Axios e Bootstrap (se volete utilizzarlo) ✅
 
 MILESTONE 2
 
