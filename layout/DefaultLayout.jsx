@@ -3,3 +3,13 @@ import AppHeader from "../components/AppHeader";
 import AppBody from "../components/AppBody";
 import AppFooter from "../components/AppFooter";
 
+export default function DefaultLayout() {
+
+    return (
+        <>
+            <AppHeader />
+            <Outlet />
+            <AppFooter />
+        </>
+    )
+};

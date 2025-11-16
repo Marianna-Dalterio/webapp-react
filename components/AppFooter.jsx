@@ -1,5 +1,35 @@
+import { Link } from "react-router-dom";
+
 export default function AppFooter() {
     return (
-        <h1>mio footer</h1>
+        <>
+            <div className="bg-light border-bottom ">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <div className="logo"> <i class="bi bi-film me-2 fs-4"> </i> MOVIES </div>
+                        </div>
+                        <div className="col">
+                            <h4>Links</h4>
+                            <ul className="list-unstyled">
+                                <li><Link to="/movies">Home</Link></li>
+                                <li><Link to="/movies/:id">Movie Review</Link></li>
+
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <h4>Contact Us</h4>
+                            <span><i class="bi bi-envelope me-2 fs-3"></i></span>
+                            <span><i class="bi bi-facebook me-2 fs-3"></i></span>
+                            <span><i class="bi bi-instagram me-2 fs-3"></i></span>
+                            <span><i class="bi bi-twitter-x me-2 fs-3"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </>
+
     )
 };

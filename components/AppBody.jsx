@@ -1,5 +1,5 @@
 export default function AppBody() {
     return (
-        <h1>mio body</h1>
+        <h1> body</h1>
     )
 };
