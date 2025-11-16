@@ -7,7 +7,7 @@ export default function AppFooter() {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <div className="logo"> <i class="bi bi-film me-2 fs-4"> </i> MOVIES </div>
+                            <div className="logo"> <i className="bi bi-film me-2 fs-4"> </i> MOVIES </div>
                         </div>
                         <div className="col">
                             <h4>Links</h4>
@@ -19,10 +19,10 @@ export default function AppFooter() {
                         </div>
                         <div className="col">
                             <h4>Contact Us</h4>
-                            <span><i class="bi bi-envelope me-2 fs-3"></i></span>
-                            <span><i class="bi bi-facebook me-2 fs-3"></i></span>
-                            <span><i class="bi bi-instagram me-2 fs-3"></i></span>
-                            <span><i class="bi bi-twitter-x me-2 fs-3"></i></span>
+                            <span><i className="bi bi-envelope me-2 fs-3"></i></span>
+                            <span><i className="bi bi-facebook me-2 fs-3"></i></span>
+                            <span><i className="bi bi-instagram me-2 fs-3"></i></span>
+                            <span><i className="bi bi-twitter-x me-2 fs-3"></i></span>
                         </div>
                     </div>
                 </div>
