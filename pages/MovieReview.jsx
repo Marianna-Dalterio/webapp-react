@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const API_URL = "http://localhost:3000/movies"
+import MovieReviews from "../components/MovieReviews";
 
 
 export default function MovieReview() {
@@ -44,19 +45,11 @@ export default function MovieReview() {
             <section className="reviews">
 
                 <div className="container mb-4">
-                    {movieReview?.reviews?.map(review => {
-                        return (
-                            <div className="list-group mb-2" key={review.id}>
-                                <a href="#" className="list-group-item list-group-item-action" aria-current="true">
-                                    <div className="d-flex w-100 justify-content-between">
-                                        <h5 className="mb-1">{review.name}</h5>
-                                    </div>
-                                    <p className="mb-1">{review.text}</p>
-                                    <small className="bi-star-fill me-2">{review.vote}</small>
-                                </a>
-                            </div>)
+                    {movieReview?.reviews?.map(review => (
+                        <MovieReviews key={review.id} review={review} />
+                    )
 
-                    })}
+                    )}
 
                 </div>
             </section>
