@@ -6,7 +6,7 @@ export default function MovieReview() {
     return (
         <>
             <div class="p-5 mb-4 bg-light rounded-3">
-                <div class="container-fluid d-flex gap-4 py-5">
+                <div className="container-fluid d-flex gap-4 py-5">
                     <div className="cover col-12 col-sm-5 col-md-4">
                         <img className="img-fluid " src="https://mr.comingsoon.it/imgdb/locandine/big/47397.jpg" alt="img" />
                     </div>

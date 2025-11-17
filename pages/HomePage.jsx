@@ -1,6 +1,24 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+const API_URL = "http://localhost:3000/movies"
 
 export default function HomePage() {
+
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        axios.get(API_URL)
+            .then(res => {
+                console.log(res);
+                setMovies(res.data);
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
+    }, [])
+
 
     return (
         <>
@@ -16,18 +34,21 @@ export default function HomePage() {
             <div className="section mb-4">
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        <div className="col">
-                            <div className="card">
-                                <Link to="/movies/:id">
-                                    <img className="card-img-top" src="" alt="img" />
-                                </Link>
-                                <div className="card-body">
-                                    <h5 className="card-title"> Title </h5>
-                                    <div className="my-2"> Author Name</div>
-                                    <Link className="btn btn-dark" role="button" to="/movies/:id"> Vedi dettagli </Link>
+                        {movies.map(movie => (
+                            <div className="col" key={movie.id}>
+                                <div className="card">
+                                    <Link to={`/movies/${movie.id}`}>
+                                        <img className="card-img-top" src={movie.image} alt={movie.title} />
+                                    </Link>
+                                    <div className="card-body">
+                                        <h5 className="card-title"> {movie.title} </h5>
+                                        <div className="my-2"> {movie.director} </div>
+                                        <Link className="btn btn-dark" role="button" to={`/movies/${movie.id}`}> Vedi dettagli </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        ))}
+
                     </div>
                 </div>
 
